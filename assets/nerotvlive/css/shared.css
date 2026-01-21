@@ -1,0 +1,28 @@
+:root {
+
+}
+
+* {
+
+}
+
+body {
+
+    .content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        #menu {
+            background: linear-gradient(#00000060, #00000010);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--bs-border-color-translucent);
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            user-select: none;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.ticker-loop-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    user-select: none;
+    opacity: 0.2;
+    overflow: hidden;
+}
+
+.ticker-row {
+    display: flex;
+    white-space: nowrap;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #ffffff10;
+    line-height: 1.2;
+    will-change: transform;
+
+    span {
+        margin: 0 2rem;
+    }
+}
+
+.move-left {
+    animation: slideLeft 20s linear infinite;
+}
+
+.move-right {
+    animation: slideRight 20s linear infinite;
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@keyframes slideRight {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+}
+
+.content {
+    .error-title {
+        color: var(--bs-danger);
+    }
+
+    .error-title.bs-primary {
+        color: var(--bs-primary);
+    }
+}

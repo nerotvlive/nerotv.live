@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ERROR 404 « nerotv.live</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/nerotvlive/css/shared.css" rel="stylesheet">
+        <link href="/assets/nerotvlive/css/error.css" rel="stylesheet">
+        <link href="/assets/nerotvlive/css/overrides.css" rel="stylesheet">
+    </head>
+    <body data-bs-theme="dark">
+        <div class="ticker-loop-background" id="bg-ticker"></div>
+        <div class="content">
+            <div class="w-100 m-0 p-0 h-100 d-flex flex-column justify-content-center align-items-center">
+                <h1 style="font-size: 6rem; font-weight: 1000; color: var(--bs-danger); text-shadow: 0 0 0.4rem var(--bs-danger);" class="error-title">ERROR 404</h1>
+                <h4 class="opacity-50 error-message" style="font-weight: 1000;">RESOURCE NOT FOUND!</h4>
+                <div class="d-flex gap-3">
+                    <button type="button" class="btn btn-danger btn-back" onclick="location.href='/';">Back to home</button>
+                </div>
+            </div>
+        </div>
+        <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/nerotvlive/js/shared.js"></script>
+        <script src="/assets/nerotvlive/js/error.js"></script>
+        <script>addEventListener("DOMContentLoaded", () => {
+            initMenu();
+            createTicker("ERROR 404");
+        });</script>
+    </body>
+</html>

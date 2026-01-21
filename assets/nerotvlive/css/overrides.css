@@ -1,0 +1,171 @@
+:root {
+    --bs-primary-transparent-0: rgba(var(--bs-primary-rgb), 0.1);
+    --bs-primary-transparent: rgba(var(--bs-primary-rgb), 0.25);
+    --bs-primary-transparent-1: var(--bs-primary-transparent);
+    --bs-primary-transparent-2: rgba(var(--bs-primary-rgb), 0.5);
+    --bs-primary-transparent-3: rgba(var(--bs-primary-rgb), 0.75);
+
+    --bs-secondary-transparent-0: rgba(var(--bs-secondary-rgb), 0.1);
+    --bs-secondary-transparent: rgba(var(--bs-secondary-rgb), 0.25);
+    --bs-secondary-transparent-1: var(--bs-secondary-transparent);
+    --bs-secondary-transparent-2: rgba(var(--bs-secondary-rgb), 0.5);
+    --bs-secondary-transparent-3: rgba(var(--bs-secondary-rgb), 0.75);
+
+    --bs-success-transparent-0: rgba(var(--bs-success-rgb), 0.1);
+    --bs-success-transparent: rgba(var(--bs-success-rgb), 0.25);
+    --bs-success-transparent-1: var(--bs-success-transparent);
+    --bs-success-transparent-2: rgba(var(--bs-success-rgb), 0.5);
+    --bs-success-transparent-3: rgba(var(--bs-success-rgb), 0.75);
+
+    --bs-danger-transparent-0: rgba(var(--bs-danger-rgb), 0.1);
+    --bs-danger-transparent: rgba(var(--bs-danger-rgb), 0.25);
+    --bs-danger-transparent-1: var(--bs-danger-transparent);
+    --bs-danger-transparent-2: rgba(var(--bs-danger-rgb), 0.5);
+    --bs-danger-transparent-3: rgba(var(--bs-danger-rgb), 0.75);
+
+    --bs-warning-transparent-0: rgba(var(--bs-warning-rgb), 0.1);
+    --bs-warning-transparent: rgba(var(--bs-warning-rgb), 0.25);
+    --bs-warning-transparent-1: var(--bs-warning-transparent);
+    --bs-warning-transparent-2: rgba(var(--bs-warning-rgb), 0.5);
+    --bs-warning-transparent-3: rgba(var(--bs-warning-rgb), 0.75);
+
+    --bs-info-transparent-0: rgba(var(--bs-info-rgb), 0.1);
+    --bs-info-transparent: rgba(var(--bs-info-rgb), 0.25);
+    --bs-info-transparent-1: var(--bs-info-transparent);
+    --bs-info-transparent-2: rgba(var(--bs-info-rgb), 0.5);
+    --bs-info-transparent-3: rgba(var(--bs-info-rgb), 0.75);
+
+    --bs-light-transparent-0: rgba(var(--bs-light-rgb), 0.1);
+    --bs-light-transparent: rgba(var(--bs-light-rgb), 0.25);
+    --bs-light-transparent-1: var(--bs-light-transparent);
+    --bs-light-transparent-2: rgba(var(--bs-light-rgb), 0.5);
+    --bs-light-transparent-3: rgba(var(--bs-light-rgb), 0.75);
+
+    --bs-dark-transparent-0: rgba(var(--bs-dark-rgb), 0.1);
+    --bs-dark-transparent: rgba(var(--bs-dark-rgb), 0.25);
+    --bs-dark-transparent-1: var(--bs-dark-transparent);
+    --bs-dark-transparent-2: rgba(var(--bs-dark-rgb), 0.5);
+    --bs-dark-transparent-3: rgba(var(--bs-dark-rgb), 0.75);
+}
+
+* {
+
+}
+
+body {
+    button, .btn {
+        transition: none;
+        background: linear-gradient(-45deg,#ffffff25,#ffffff10);
+        border: 1px solid var(--bs-border-color-translucent);
+        backdrop-filter: blur(16px);
+    }
+
+    button:hover, .btn:hover {
+        transition: all 0.15s ease;
+        background: linear-gradient(-45deg,#ffffff50,#ffffff25);
+        border: 1px solid var(--bs-border-color-translucent);
+    }
+
+    button:active, .btn:active  {
+        scale: 0.95;
+        transition: all 0.15s ease;
+        background: linear-gradient(-45deg,#ffffff75,#ffffff50);
+        border: 1px solid var(--bs-border-color-translucent) !important;
+    }
+
+    .btn-primary {
+        background: linear-gradient(-45deg,var(--bs-primary-transparent),var(--bs-primary-transparent-0));
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(-45deg,var(--bs-primary-transparent-2),var(--bs-primary-transparent-1));
+    }
+
+    .btn-primary:active {
+        background: linear-gradient(-45deg,var(--bs-primary-transparent-3),var(--bs-primary-transparent-2)) !important;
+    }
+
+    .btn-secondary {
+        background: linear-gradient(-45deg,var(--bs-secondary-transparent),var(--bs-secondary-transparent-0));
+    }
+
+    .btn-secondary:hover {
+        background: linear-gradient(-45deg,var(--bs-secondary-transparent-2),var(--bs-secondary-transparent-1));
+    }
+
+    .btn-secondary:active {
+        background: linear-gradient(-45deg,var(--bs-secondary-transparent-3),var(--bs-secondary-transparent-2)) !important;
+    }
+
+    .btn-success {
+        background: linear-gradient(-45deg,var(--bs-success-transparent),var(--bs-success-transparent-0));
+    }
+
+    .btn-success:hover {
+        background: linear-gradient(-45deg,var(--bs-success-transparent-2),var(--bs-success-transparent-1));
+    }
+
+    .btn-success:active {
+        background: linear-gradient(-45deg,var(--bs-success-transparent-3),var(--bs-success-transparent-2)) !important;
+    }
+
+    .btn-danger {
+        background: linear-gradient(-45deg,var(--bs-danger-transparent),var(--bs-danger-transparent-0));
+    }
+
+    .btn-danger:hover {
+        background: linear-gradient(-45deg,var(--bs-danger-transparent-2),var(--bs-danger-transparent-1));
+    }
+
+    .btn-danger:active {
+        background: linear-gradient(-45deg,var(--bs-danger-transparent-3),var(--bs-danger-transparent-2)) !important;
+    }
+
+    .btn-warning {
+        background: linear-gradient(-45deg,var(--bs-warning-transparent),var(--bs-warning-transparent-0));
+    }
+
+    .btn-warning:hover {
+        background: linear-gradient(-45deg,var(--bs-warning-transparent-2),var(--bs-warning-transparent-1));
+    }
+
+    .btn-warning:active {
+        background: linear-gradient(-45deg,var(--bs-warning-transparent-3),var(--bs-warning-transparent-2)) !important;
+    }
+
+    .btn-info {
+        background: linear-gradient(-45deg,var(--bs-info-transparent),var(--bs-info-transparent-0));
+    }
+
+    .btn-info:hover {
+        background: linear-gradient(-45deg,var(--bs-info-transparent-2),var(--bs-info-transparent-1));
+    }
+
+    .btn-info:active {
+        background: linear-gradient(-45deg,var(--bs-info-transparent-3),var(--bs-info-transparent-2)) !important;
+    }
+
+    .btn-light {
+        background: linear-gradient(-45deg,var(--bs-light-transparent),var(--bs-light-transparent-0));
+    }
+
+    .btn-light:hover {
+        background: linear-gradient(-45deg,var(--bs-light-transparent-2),var(--bs-light-transparent-1));
+    }
+
+    .btn-light:active {
+        background: linear-gradient(-45deg,var(--bs-light-transparent-3),var(--bs-light-transparent-2)) !important;
+    }
+
+    .btn-dark {
+        background: linear-gradient(-45deg,var(--bs-dark-transparent),var(--bs-dark-transparent-0));
+    }
+
+    .btn-dark:hover {
+        background: linear-gradient(-45deg,var(--bs-dark-transparent-2),var(--bs-dark-transparent-1));
+    }
+
+    .btn-dark:active {
+        background: linear-gradient(-45deg,var(--bs-dark-transparent-3),var(--bs-dark-transparent-2)) !important;
+    }
+}
