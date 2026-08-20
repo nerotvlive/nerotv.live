@@ -17,7 +17,7 @@ async function initMenu() {
 function addFooter() {
     if(!document.getElementById("menu")) {
         const content = document.querySelector(".content");
-        let footer = "<div class='container-fluid bg-black p-3 py-5 w-100 d-flex justify-content-center align-items-center text-center'><p class='m-0 p-0 opacity-75'><a class='link' href='https://nerofy.de/rechtliches' target='_blank'>Imprint and Privacy Declaration (ger)</a><br>©copyright 2026 Nerofy Network. All rights reserved.</p></div>";
+        let footer = "<div class='container-fluid bg-black p-3 py-5 w-100 d-flex justify-content-center align-items-center text-center'><p class='m-0 p-0 opacity-75 text-secondary'><a class='link-underline-opacity-0 link-underline-opacity-50-hover link-light' href='https://nerotv.live/imprint' target='_blank'>Impressum</a> <a class='link-underline-opacity-0 link-underline-opacity-50-hover link-light' href='https://nerotv.live/privacy' target='_blank'>Datenschutzerklärung</a><br><br>Diese Seite ist Teil des <a class='link-underline-opacity-0 link-underline-opacity-50-hover link-light' href='https://www.zyneoncollective.com' target='_blank'>Zyneon Collective</a><br>©copyright 2026 <a class='link-underline-opacity-0 link-underline-opacity-50-hover link-light' href='https://www.zyneonstudios.com' target='_blank'>Zyneon Studios</a>. All rights reserved.</p></div>";
         content.innerHTML += footer;
     }
 }
