@@ -1,6 +1,7 @@
 # nerotv.live
 
 This repository contains the source code for the nerotv.live website
+[Click here to visit the web site nerotv.live](https://nerotv.live)
 
 
 ## Dependencies
