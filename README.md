@@ -1,5 +1,16 @@
-# The website of nerotvlive
-A simple static Website written with HTML, JavaScript and CSS.<br>
-This website is using [Bootstrap 5](https://getbootstrap.com) and [PopperJS](https://popper.js.org/docs).
+# nerotv.live
 
-[Click here to view the website!](https://nerotvlive.github.io/nerotv.live)
+This repository contains the source code for the nerotv.live website
+
+
+## Dependencies
+
+| Package              | Version   | License                                                                |
+|----------------------|-----------|------------------------------------------------------------------------|
+| `vite`               | `8.2.0`   | MIT                                                                    |
+| `vue`                | `3.5.40`  | MIT                                                                    |
+| `@vitejs/plugin-vue` | `6.0.8`   | MIT                                                                    |
+| `tailwindcss`        | `4.3.3`   | MIT                                                                    |
+| `@tailwindcss/vite`  | `4.3.3`   | MIT                                                                    |
+| `nodejs`             | `24.19.0` | [here](https://github.com/nodejs/node/tree/main?tab=License-1-ov-file) |
+| `pnpm`               | `11.20.0` | MIT                                                                    |
