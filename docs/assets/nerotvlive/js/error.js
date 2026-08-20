@@ -1,3 +1,5 @@
+let ticker = "UNKNOWN ERROR";
+
 function createTicker(string) {
     if(!string) {
         string = "ERROR"
@@ -45,10 +47,9 @@ addEventListener("DOMContentLoaded", () => {
     }
     if(urlParams.has("error")) {
         document.querySelector(".error-title").innerText = urlParams.get("error");
-        createTicker(urlParams.get("error"));
-    } else {
-        createTicker("UNKNOWN ERROR");
+        ticker = urlParams.get("error");
     }
+    createTicker(ticker);
     if(urlParams.has("message")) {
         document.querySelector(".error-message").innerText = urlParams.get("message");
     }

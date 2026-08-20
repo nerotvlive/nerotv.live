@@ -7,13 +7,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/nerotvlive/css/shared.css" rel="stylesheet">
+        <link href="assets/nerotvlive/css/error.css" rel="stylesheet">
         <link href="assets/nerotvlive/css/overrides.css" rel="stylesheet">
     </head>
-    <body data-bs-theme="dark" class="overflow-hidden">
+    <body data-bs-theme="dark">
+        <div class="ticker-loop-background" id="bg-ticker"></div>
         <div class="content">
-            <iframe src="error.html?error=NEUE+SEITE&message=DIESE+SEITE+IST+ALT...+BESUCHE+DIE+NEUE!&classList=bs-primary&hideReload=true" class="border-0 w-100 h-100"></iframe>
+            <div class="w-100 m-0 p-0 h-100 d-flex flex-column justify-content-center align-items-center">
+                <h1 style="font-size: 6rem; font-weight: 1000;" class="error-title text-primary">NEUE SEITE!</h1>
+                <h4 class="opacity-50 error-message" style="font-weight: 1000;">Diese Seite ist alt... besuche die neue!</h4>
+                <div class="d-flex gap-3">
+                    <button type="button" class="btn btn-primary btn-back" onclick="location.href='https://nerotv.live';">Neue Website</button>
+                </div>
+            </div>
         </div>
         <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="assets/nerotvlive/js/shared.js"></script>
+        <script src="assets/nerotvlive/js/error.js"></script>
+        <script>
+            ticker = "NEUE SEITE "
+        </script>
     </body>
 </html>
