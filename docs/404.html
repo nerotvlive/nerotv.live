@@ -11,7 +11,10 @@
     <script>
         const urlPath = window.location.pathname.replace("/nerotv.live","");
         const urlParams = new URLSearchParams(window.location.search);
-        let newUrl = "https://nerotv.live" + urlPath + "?" + urlParams.toString();
+        let newUrl = "https://nerotv.live" + urlPath;
+        if(urlParams) {
+            newUrl = newUrl + "?" + urlParams.toString();
+        }
         newUrl = newUrl.replace("nerotvlive.github.com","nerotv.live");
         const redirectLink = document.getElementById('redirect-link');
         if(redirectLink) {
