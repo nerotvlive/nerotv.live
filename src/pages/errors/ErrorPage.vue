@@ -27,7 +27,7 @@ onMounted(() => {
       <div class="flex flex-col items-center">
         <div>
           <h1 ref="header-text" class="text-5xl sm:text-6xl md:text-7xl px-4 font-bold"><span class="gray-text"><slot name="error"></slot></span><span class="special-text"><slot name="error-code">0</slot></span></h1>
-          <p class="py-2"><slot name="message"></slot></p>
+          <p class="py-4 text-xl"><slot name="message"></slot></p>
         </div>
         <div class="flex gap-4 p-4 pt-8">
           <router-link to="/" class="rounded-full text-black px-4 py-2 border border-zinc-300 bg-zinc-400 hover:transition-all shadow-lg shadow-black hover:bg-zinc-300 hover:shadow-zinc-300 hover:shadow-sm">

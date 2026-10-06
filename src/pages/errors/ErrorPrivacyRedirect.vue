@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import ErrorPage from "@/pages/errors/ErrorPage.vue";
   import {useI18n} from "vue-i18n";
-  //window.location.href = "https://zyneoncollective.com/datenschutz"
+  window.location.href = "https://zyneoncollective.com/datenschutz"
   const { t } = useI18n()
 </script>
 
