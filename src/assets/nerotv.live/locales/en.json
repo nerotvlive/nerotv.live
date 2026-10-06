@@ -12,5 +12,14 @@
     "imprint": "Imprint (German)",
     "privacy": "Privacy (German)",
     "copyright": "©copyright 2026 Zyneon Studios. All rights reserved."
+  },
+  "errors": {
+    "backToHome": "Back to home",
+    "error": "Error ",
+    "notFound": "This page could not be found...",
+    "imprint": "Are you looking for the imprint?",
+    "openImprint": "Open imprint (german)",
+    "privacy": "Are you looking for the privacy policy?",
+    "openPrivacy": "Open privacy policy (german)"
   }
 }

@@ -12,5 +12,14 @@
     "imprint": "Impressum",
     "privacy": "Datenschutzerklärung",
     "copyright": "©copyright 2026 Zyneon Studios. Alle Rechte vorbehalten."
+  },
+  "errors": {
+    "backToHome": "Zurück zur Startseite",
+    "error": "Fehler ",
+    "notFound": "Diese Seite konnte nicht gefunden werden...",
+    "imprint": "Suchst du das Impressum?",
+    "openImprint": "Impressum öffnen",
+    "privacy": "Suchst du die Datenschutzerklärung?",
+    "openPrivacy": "Datenschutzerklärung öffnen"
   }
 }

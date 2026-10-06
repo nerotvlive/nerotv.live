@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import ErrorPage from "@/pages/errors/ErrorPage.vue";
+import {useI18n} from "vue-i18n";
+const { t } = useI18n()
 </script>
 
 <template>
   <div class="flex flex-col grow justify-items-center justify-center align-middle">
     <ErrorPage>
-      <template #error>Error 404</template>
-      <template #message>This page could not be found...</template>
+      <template #error>{{ t('errors.error') }} 404</template>
+      <template #message>{{ t('errors.notFound') }}</template>
     </ErrorPage>
   </div>
 </template>
