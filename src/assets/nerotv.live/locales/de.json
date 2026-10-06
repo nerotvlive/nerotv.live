@@ -5,6 +5,12 @@
     "de": "Deutsch",
     "en": "Englisch"
   },
+  "nav": {
+
+  },
+  "header": {
+    "welcome": "Willkommen auf "
+  },
   "footer": {
     "language": "Sprache: ",
     "collective": "Diese Seite ist ein Teil des ",

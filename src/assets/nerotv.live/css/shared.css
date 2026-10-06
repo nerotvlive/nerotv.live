@@ -2,7 +2,8 @@
 
 :root {
   --n-bg-root: #070707;
-  --n-bg-body: radial-gradient(circle at bottom right, #7100ff20 0%, black);
+  --n-bg-body: black;
+  --n-bg-body-alt: radial-gradient(circle at bottom right, #7100ff20 0%, black);
 
   --text: #9ca3af;
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -17,13 +18,12 @@
 
   background: var(--n-bg-root);
 
-  @media (max-width: 1024px) {
+  @media (max-width: 2560px) {
     font-size: 16px;
   }
 }
 
 body {
-  opacity: 0;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -35,10 +35,6 @@ body {
   background: var(--n-bg-body);
   overflow: hidden;
   overflow-y: auto;
-}
-
-body.active {
-  animation: fadeIn 2s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
