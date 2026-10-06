@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import './style.css'
+import './assets/nerotv.live/css/style.css'
 import App from './App.vue'
 
 if(window.location.href.toLowerCase().includes("nerotvlive.github.io/nerotv.live")) {
