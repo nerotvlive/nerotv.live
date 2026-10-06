@@ -5,10 +5,9 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="flex flex-col grow justify-items-center justify-center align-middle">
     <ErrorPage>
-      <template #error>{{ t('errors.error') }} 404</template>
+      <template #error>{{ t('errors.error') }}</template>
+      <template #error-code>404</template>
       <template #message>{{ t('errors.notFound') }}</template>
     </ErrorPage>
-  </div>
 </template>

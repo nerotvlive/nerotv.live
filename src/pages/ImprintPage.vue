@@ -1,16 +1,20 @@
 <script setup lang="ts">
-import ErrorPage from "@/pages/errors/ErrorPage.vue";
-window.location.href = "https://zyneoncollective.com/impressum"
+  import ErrorPage from "@/pages/errors/ErrorPage.vue";
+  import {useI18n} from "vue-i18n";
+  window.location.href = "https://zyneoncollective.com/impressum"
+  const { t } = useI18n()
 </script>
 
 <template>
-  <div class="flex flex-col grow justify-items-center justify-center align-middle">
-    <ErrorPage>
-      <template #error>Error 404</template>
-      <template #message>This page could not be found...<br>Search for the imprint?</template>
-      <template #buttons>
-        <a href="https://zyneoncollective.com/impressum"><button class="bg-transparent hover:bg-white border border-white text-white hover:text-black py-2 px-4 rounded-xl cursor-pointer shadow-lg transition">Open Imprint</button></a>
-      </template>
-    </ErrorPage>
-  </div>
+  <ErrorPage>
+    <template #error>{{ t('errors.error') }}</template>
+    <template #error-code>404</template>
+    <template #message>{{ t('errors.notFound') }}<br>{{ t('errors.imprint') }}</template>
+    <template #buttons>
+      <a href="https://zyneoncollective.com/impressum" class="rounded-full text-white px-4 py-2 border border-red-400 bg-red-500 hover:transition-all shadow-lg shadow-black hover:bg-red-400 hover:shadow-red-400 hover:shadow-sm">
+        <i class="bi bi-box-arrow-up-right mr-0.5"></i>
+        {{ t('errors.openImprint') }}
+      </a>
+    </template>
+  </ErrorPage>
 </template>

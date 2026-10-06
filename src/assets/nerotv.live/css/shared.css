@@ -4,6 +4,7 @@
   --n-bg-root: #070707;
   --n-bg-body: black;
   --n-bg-body-alt: radial-gradient(circle at bottom right, #7100ff20 0%, black);
+  --n-bg-body-error: radial-gradient(circle at bottom right, rgb(255 0 0 / 0.13) 0%, black);
 
   --text: #9ca3af;
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
