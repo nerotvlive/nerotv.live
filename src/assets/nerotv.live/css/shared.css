@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --n-bg-root: #070707;
+  --n-bg-body: radial-gradient(circle at bottom right, #7100ff20 0%, black);
+
+  --text: #9ca3af;
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: var(--n-bg-root);
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  background: var(--n-bg-body);
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+body.active {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "welcome": "Welcome to my website",
+  "locales": {
+    "auto": "Automatic",
+    "de": "German",
+    "en": "English"
+  },
+  "footer": {
+    "language": "Language: ",
+    "collective": "This page is a part of the ",
+    "studios": "The Zyneon Collective is a part of the ",
+    "imprint": "Imprint (German)",
+    "privacy": "Privacy (German)",
+    "copyright": "©copyright 2026 Zyneon Studios. All rights reserved."
+  }
+}

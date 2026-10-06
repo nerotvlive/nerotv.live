@@ -1,0 +1,16 @@
+{
+  "welcome": "Willkommen auf meiner Website",
+  "locales": {
+    "auto": "Automatisch",
+    "de": "Deutsch",
+    "en": "Englisch"
+  },
+  "footer": {
+    "language": "Sprache: ",
+    "collective": "Diese Seite ist ein Teil des ",
+    "studios": "Das Zyneon Collective ist ein Teil von den ",
+    "imprint": "Impressum",
+    "privacy": "Datenschutzerklärung",
+    "copyright": "©copyright 2026 Zyneon Studios. Alle Rechte vorbehalten."
+  }
+}
