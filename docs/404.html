@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirect to nerotv.live</title>
+</head>
+<body bgcolor="black" style="background-color: black; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif;">
+    <a href="https://nerotv.live" style="color: deepskyblue; text-decoration: none;" id="redirect-link">
+        If you are not redirected automatically, click here
+    </a>
+    <script>
+        const urlPath = window.location.pathname;
+        const urlParams = new URLSearchParams(window.location.search);
+        let newUrl = "https://nerotv.live" + urlPath + "?" + urlParams.toString();
+        newUrl = newUrl.replace("nerotvlive.github.com/nerotv.live","nerotv.live");
+        const redirectLink = document.getElementById('redirect-link');
+        if(redirectLink) {
+            try {
+                redirectLink.href = newUrl;
+            } catch (error) {
+                console.error("An error occurred:", error);
+            }
+        }
+        window.location.href = newUrl;
+    </script>
+</body>
+</html>
