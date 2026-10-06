@@ -9,10 +9,10 @@
         If you are not redirected automatically, click here
     </a>
     <script>
-        const urlPath = window.location.pathname;
+        const urlPath = window.location.pathname.replace("/nerotv.live","");
         const urlParams = new URLSearchParams(window.location.search);
         let newUrl = "https://nerotv.live" + urlPath + "?" + urlParams.toString();
-        newUrl = newUrl.replace("nerotvlive.github.com/nerotv.live","nerotv.live");
+        newUrl = newUrl.replace("nerotvlive.github.com","nerotv.live");
         const redirectLink = document.getElementById('redirect-link');
         if(redirectLink) {
             try {
