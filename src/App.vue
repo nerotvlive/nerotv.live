@@ -7,8 +7,8 @@
 <template>
   <div class="fixed top-0 left-0 right-0 z-10 select-none" style="backdrop-filter: blur(32px);">
     <div class="mx-auto max-w-7xl p-3 min-h-14 max-h-14">
-      <router-link to="/" class="hover:text-white hover:transition-all">
-        <img alt="nerotv.live" src="@/assets/nerotv.live/img/text.png" class="h-8">
+      <router-link to="/" class="hover:text-white hover:transition-all w-fit">
+        <img alt="nerotv.live" src="@/assets/nerotv.live/img/text.png" class="h-8 w-fit">
       </router-link>
     </div>
   </div>

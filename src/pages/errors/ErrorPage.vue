@@ -23,7 +23,7 @@ onMounted(() => {
   <div class="header relative min-h-[50vh] flex flex-col">
     <div class="header-overlay"></div>
     <div class="header-content max-w-6xl mx-auto w-full py-4 grow flex flex-col justify-between items-center text-center">
-      <div></div>
+      <div> </div>
       <div class="flex flex-col items-center">
         <div>
           <h1 ref="header-text" class="text-5xl sm:text-6xl md:text-7xl px-4 font-bold"><span class="gray-text"><slot name="error"></slot></span><span class="special-text"><slot name="error-code">0</slot></span></h1>
