@@ -6,7 +6,8 @@
     "en": "Englisch"
   },
   "nav": {
-
+    "close": "Menü schließen",
+    "home": "Start"
   },
   "header": {
     "welcome": "Willkommen auf "

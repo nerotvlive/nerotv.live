@@ -55,18 +55,12 @@ onUnmounted(() => {
       <div class="flex justify-end">
         <div class="menu hidden md:flex gap-2" :class="{open: menu}">
           <button class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-full border border-transparent hover:border-zinc-400/50 close-menu" @click="toggleMenu()">
-            <i class="bi bi-list"></i>
-            Close menu
+            <i class="bi bi-x-lg"></i>
+            {{ t('nav.close') }}
           </button>
-          <button class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-full border border-transparent hover:border-zinc-400/50">
-            Über mich
-          </button>
-          <button class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-full border border-transparent hover:border-zinc-400/50">
-            Über mich
-          </button>
-          <button class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-full border border-transparent hover:border-zinc-400/50">
-            Über mich
-          </button>
+          <router-link to="/" active-class="bg-zinc-500/50 border-zinc-400/50 text-white" class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-full border border-transparent hover:border-zinc-400/50">
+            {{ t('nav.home') }}
+          </router-link>
         </div>
 
         <button class="md:hidden text-shadow-zinc-200 px-2 text-xl hover:text-white hover:transition-all hover:cursor-pointer" @click="toggleMenu()">
@@ -108,6 +102,10 @@ onUnmounted(() => {
     .close-menu {
       display: none;
     }
+
+    button.active a.active {
+
+    }
   }
 
   .menu.open {
@@ -126,9 +124,10 @@ onUnmounted(() => {
     padding: 1rem 0;
     width: 0;
     overflow: hidden;
-    animation: menuIn 0.5s linear forwards;
+    animation: menuIn 0.15s ease forwards;
 
     button, a {
+      text-align: center;
       white-space: nowrap;
       padding: 0.5rem 1.25rem;
 
@@ -146,7 +145,7 @@ onUnmounted(() => {
 
     to {
       padding: 1rem 1rem;
-      width: 14rem;
+      width: 16rem;
     }
   }
 </style>
