@@ -74,7 +74,7 @@ onUnmounted(() => {
       <div class="h-14 p-3"></div>
       <router-view/>
     </main>
-    <div class="bg-zinc-950 border-t" style="border-color: #ffffff10">
+    <div class="bg-zinc-950 min-h-fit z-50 border-t" style="border-color: #ffffff10">
       <div class="max-w-7xl mx-auto p-4 py-6 select-none text-center flex flex-col text-sm">
         <span class="mb-4">
           {{ t('footer.language') }} <LanguageSwitcher/>
