@@ -81,12 +81,12 @@ onUnmounted(() => {
         </span>
         <span>{{ t('footer.collective') }}<a class="text-white hover:cursor-pointer hover:text-blue-500 hover:transition-all" href="https://www.zyneoncollective.com/" target="_blank">Zyneon Collective</a></span>
         <span>{{ t('footer.studios') }}<a class="text-white hover:cursor-pointer hover:text-blue-500 hover:transition-all" href="https://www.zyneonstudios.com/" target="_blank">Zyneon Studios</a></span>
-        <span class="mt-3 hidden flex-col sm:flex-row gap-3 justify-center">
+        <span class="mt-3 hidden gap-3 justify-center">
           <router-link to="/imprint" class="hover:text-white hover:cursor-pointer hover:transition-colors" active-class="text-white font-bold">{{ t('footer.imprint') }}</router-link>
           <router-link to="/privacy" class="hover:text-white hover:cursor-pointer hover:transition-colors" active-class="text-white font-bold">{{ t('footer.privacy') }}</router-link>
           <a class="hover:text-white hover:cursor-pointer hover:transition-colors" href="https://github.com/nerotvlive/nerotv.live" target="_blank">GitHub/Source code</a>
         </span>
-        <span class="mt-3 flex flex-col sm:flex-row gap-3 justify-center">
+        <span class="mt-3 flex gap-3 justify-center">
           <a class="hover:text-white hover:cursor-pointer hover:transition-colors" href="https://zyneoncollective.com/impressum" target="_blank">{{ t('footer.imprint') }}</a>
           <a class="hover:text-white hover:cursor-pointer hover:transition-colors" href="https://zyneoncollective.com/datenschutz" target="_blank">{{ t('footer.privacy') }}</a>
           <a class="hover:text-white hover:cursor-pointer hover:transition-colors" href="https://github.com/nerotvlive/nerotv.live" target="_blank">GitHub/Source code</a>
