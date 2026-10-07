@@ -102,10 +102,6 @@ onUnmounted(() => {
     .close-menu {
       display: none;
     }
-
-    button.active a.active {
-
-    }
   }
 
   .menu.open {
