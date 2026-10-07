@@ -54,11 +54,11 @@ onUnmounted(() => {
       </div>
       <div class="flex justify-end">
         <div class="menu hidden md:flex gap-2" :class="{open: menu}">
-          <button class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-full border border-transparent hover:border-zinc-400/50 close-menu" @click="toggleMenu()">
+          <button class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-xl border border-transparent hover:border-zinc-400/50 close-menu" @click="toggleMenu()">
             <i class="bi bi-x-lg"></i>
             {{ t('nav.close') }}
           </button>
-          <router-link to="/" active-class="bg-zinc-500/50 border-zinc-400/50 text-white" class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-full border border-transparent hover:border-zinc-400/50">
+          <router-link to="/" active-class="bg-zinc-500/50 border-zinc-400/50 text-white" class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-xl border border-transparent hover:border-zinc-400/50">
             {{ t('nav.home') }}
           </router-link>
         </div>
