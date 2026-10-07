@@ -1,15 +1,78 @@
 <script setup lang="ts">
-  import {useI18n} from "vue-i18n";
-  import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
-  const { t } = useI18n()
+import { useI18n } from "vue-i18n";
+import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
+import { ref, onMounted, onUnmounted } from "vue";
+
+const { t } = useI18n();
+
+const menu = ref(false);
+
+const openMenu = () => {
+  menu.value = true;
+};
+
+const closeMenu = () => {
+  menu.value = false;
+};
+
+const toggleMenu = () => {
+  if (menu.value) closeMenu();
+  else openMenu();
+};
+
+let mediaQuery: MediaQueryList;
+
+const handleResize = (e: MediaQueryListEvent | MediaQueryList) => {
+  if (e.matches) {
+    closeMenu();
+  }
+};
+
+onMounted(() => {
+  mediaQuery = window.matchMedia("(min-width: 768px)");
+  handleResize(mediaQuery);
+  mediaQuery.addEventListener("change", handleResize);
+});
+
+onUnmounted(() => {
+  if (mediaQuery) {
+    mediaQuery.removeEventListener("change", handleResize);
+  }
+});
 </script>
 
 <template>
   <div class="fixed top-0 left-0 right-0 z-10 select-none" style="backdrop-filter: blur(32px);">
-    <div class="mx-auto max-w-7xl p-3 min-h-14 max-h-14">
-      <router-link to="/" class="hover:text-white hover:transition-all w-fit">
-        <img alt="nerotv.live" src="@/assets/nerotv.live/img/text.png" class="h-8 w-fit">
-      </router-link>
+    <div class="mx-auto max-w-7xl p-3 min-h-14 max-h-14 flex justify-between">
+      <div class="flex justify-start">
+        <router-link to="/" class="hover:text-white hover:transition-all w-fit">
+          <img alt="nerotv.live" src="@/assets/nerotv.live/img/text.png" class="h-8 w-fit">
+        </router-link>
+      </div>
+      <div class="grow flex-1 justify-center hidden">
+
+      </div>
+      <div class="flex justify-end">
+        <div class="menu hidden md:flex gap-2" :class="{open: menu}">
+          <button class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-full border border-transparent hover:border-zinc-400/50 close-menu" @click="toggleMenu()">
+            <i class="bi bi-list"></i>
+            Close menu
+          </button>
+          <button class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-full border border-transparent hover:border-zinc-400/50">
+            Über mich
+          </button>
+          <button class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-full border border-transparent hover:border-zinc-400/50">
+            Über mich
+          </button>
+          <button class="text-shadow-zinc-200 px-3 text-lg hover:text-white hover:transition-all hover:cursor-pointer hover:bg-zinc-500/50 rounded-full border border-transparent hover:border-zinc-400/50">
+            Über mich
+          </button>
+        </div>
+
+        <button class="md:hidden text-shadow-zinc-200 px-2 text-xl hover:text-white hover:transition-all hover:cursor-pointer" @click="toggleMenu()">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
     </div>
   </div>
   <div style="">
@@ -39,3 +102,51 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+  .menu {
+    .close-menu {
+      display: none;
+    }
+  }
+
+  .menu.open {
+    .close-menu {
+      display: unset;
+    }
+
+    box-shadow: 0 0 1rem black;
+    border-left: 1px solid #ffffff15;
+    display: flex;
+    position: absolute;
+    background: black;
+    top: 0; right: 0;
+    height: 100vh;
+    flex-direction: column;
+    padding: 1rem 0;
+    width: 0;
+    overflow: hidden;
+    animation: menuIn 0.5s linear forwards;
+
+    button, a {
+      white-space: nowrap;
+      padding: 0.5rem 1.25rem;
+
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  @keyframes menuIn {
+    from {
+      padding: 1rem 0;
+      width: 0;
+    }
+
+    to {
+      padding: 1rem 1rem;
+      width: 14rem;
+    }
+  }
+</style>
