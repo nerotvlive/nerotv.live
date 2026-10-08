@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import ErrorPage from "@/pages/errors/ErrorPage.vue";
 import {useI18n} from "vue-i18n";
+import {useRoute} from "vue-router";
 const { t } = useI18n()
+
+let url = useRoute().fullPath;
+if(url.toLowerCase().endsWith('.html')) {
+  url = url.substring(0, url.length - 5);
+  window.location.href = url;
+}
 </script>
 
 <template>
