@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {onMounted} from "vue";
+import {onMounted, ref} from "vue";
 import {useI18n} from "vue-i18n";
 const { t } = useI18n()
 onMounted(() => {
@@ -18,10 +18,10 @@ onMounted(() => {
   }
 })
 
+const searchInput = ref<HTMLInputElement | null>(null);
 const startSearch = () => {
-  const searchbar = document.getElementById('search-bar');
-  if(searchbar) {
-    const query = searchbar.value;
+  if(searchInput.value) {
+    const query = searchInput.value.value;
     const formattedQuery = encodeURIComponent(query);
     const searchUrl = "https://google.com/search?q=%s"
     window.location.href = searchUrl.replace('%s', formattedQuery);
@@ -35,7 +35,7 @@ const startSearch = () => {
     <div class="header-content max-w-6xl mx-auto w-full py-4 grow flex flex-col justify-between items-center text-center">
       <div></div>
       <div class="flex flex-col items-center">
-        <input @keydown.enter="startSearch();" id="search-bar" ref="searchInput" type="text" class="bg-zinc-400/25 backdrop-blur-2xl text-white px-8 py-4 rounded-full text-xl w-[50vw] max-w-5xl" :placeholder="t('startpage.search.placeholder')" autofocus>
+        <input @keydown.enter="startSearch();" ref="searchInput" type="text" class="bg-zinc-400/25 backdrop-blur-2xl text-white px-8 py-4 rounded-full text-xl w-[50vw] max-w-5xl" :placeholder="t('startpage.search.placeholder')" autofocus>
       </div>
       <div>
         <button class="p-2 hover:cursor-pointer bg-transparent hover:text-white transition-all hover:scale-110 hidden">
