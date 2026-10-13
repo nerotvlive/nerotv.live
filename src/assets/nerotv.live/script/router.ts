@@ -9,6 +9,9 @@ import ErrorImprintRedirect from "@/pages/errors/ErrorImprintRedirect.vue";
 import ErrorPrivacyRedirect from "@/pages/errors/ErrorPrivacyRedirect.vue";
 import StartPage from "@/pages/StartPage.vue";
 
+import defaultFavicon from '@/assets/nerotv.live/img/logo.png'
+import startpageFavicon from '@/assets/nerotv.live/img/startpage.png'
+
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
@@ -25,7 +28,7 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/startpage',
         name: 'Startpage',
-        meta: { title: 'New Tab' },
+        meta: { title: 'New Tab', favicon: startpageFavicon },
         component: StartPage
     },
     {
@@ -75,6 +78,17 @@ router.afterEach((to) => {
     const defaultTitle = 'nerotv.live';
     const title = to.meta.title as string | undefined;
     document.title = title ? `${defaultTitle} » ${title}` : defaultTitle;
+
+    const faviconPath = (to.meta.favicon as string) || defaultFavicon;
+    let link: HTMLLinkElement | null = document.querySelector("link[rel~='icon']");
+
+    if (!link) {
+        link = document.createElement('link');
+        link.rel = 'icon';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+
+    link.href = faviconPath;
 })
 
 export default router;
