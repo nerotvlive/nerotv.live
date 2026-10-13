@@ -7,6 +7,7 @@ import ImprintPage from "@/pages/ImprintPage.vue";
 import PrivacyPage from "@/pages/PrivacyPage.vue";
 import ErrorImprintRedirect from "@/pages/errors/ErrorImprintRedirect.vue";
 import ErrorPrivacyRedirect from "@/pages/errors/ErrorPrivacyRedirect.vue";
+import StartPage from "@/pages/StartPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -20,6 +21,12 @@ const routes: Array<RouteRecordRaw> = [
         name: 'Imprint',
         meta: { title: 'Imprint' },
         component: ImprintPage
+    },
+    {
+        path: '/startpage',
+        name: 'Startpage',
+        meta: { title: 'New Tab' },
+        component: StartPage
     },
     {
         path: '/impressum',

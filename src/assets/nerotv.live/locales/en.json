@@ -28,5 +28,10 @@
     "openImprint": "Open imprint (german)",
     "privacy": "Are you looking for the privacy policy?",
     "openPrivacy": "Open privacy policy (german)"
+  },
+  "startpage": {
+    "search": {
+      "placeholder": "Search..."
+    }
   }
 }

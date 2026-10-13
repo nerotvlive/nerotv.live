@@ -28,5 +28,10 @@
     "openImprint": "Impressum öffnen",
     "privacy": "Suchst du die Datenschutzerklärung?",
     "openPrivacy": "Datenschutzerklärung öffnen"
+  },
+  "startpage": {
+    "search": {
+      "placeholder": "Suchen..."
+    }
   }
 }
