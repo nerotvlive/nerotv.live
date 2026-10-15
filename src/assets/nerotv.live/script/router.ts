@@ -11,6 +11,7 @@ import StartPage from "@/pages/StartPage.vue";
 
 import defaultFavicon from '@/assets/nerotv.live/img/logo.png'
 import startpageFavicon from '@/assets/nerotv.live/img/startpage.png'
+import ErrorGame from "@/pages/errors/ErrorGame.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -60,6 +61,12 @@ const routes: Array<RouteRecordRaw> = [
         name: 'Datenschutzerklärung',
         meta: { title: 'Error 404' },
         component: ErrorPrivacyRedirect
+    },
+    {
+        path: '/legacydefender',
+        name: 'LEGACY DEFENDER',
+        meta: { title: 'LEGACY DEFENDER' },
+        component: ErrorGame
     },
     {
         path: '/:pathMatch(.*)*',
